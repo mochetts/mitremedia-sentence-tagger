@@ -5,9 +5,9 @@ class EntitiesController < ApplicationController
 
     respond_to do |format|
       if entity.save
-        format.html { redirect_to sentence_url(entity.sentence), notice: "Entity was successfully created" }
+        format.html { redirect_to sentence_url(entity.sentence), notice: "Tag was successfully created" }
       else
-        format.html { redirect_to sentence_url(entity.sentence), flash: { error: "There was a problem creating your entity" } }
+        format.html { redirect_to sentence_url(entity.sentence), flash: { error: "There was a problem creating your tag" } }
       end
     end
   end
