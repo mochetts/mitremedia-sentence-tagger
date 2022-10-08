@@ -9,10 +9,10 @@
   }
 
   .btn-blue {
-    @apply bg-blue-500 text-white;
+    @apply bg-blue-300 text-sky-900 py-2;
   }
 
   .btn-blue:hover {
-    @apply bg-blue-700;
+    @apply bg-blue-700 text-white;
   }
 }
