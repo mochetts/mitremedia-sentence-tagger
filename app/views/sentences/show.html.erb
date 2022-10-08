@@ -1,0 +1,16 @@
+<div class="px-5" data-controller="sentences">
+  <h1 class="text-lg font-bold mb-10">
+    <%= link_to '<-', sentences_path, class: 'dark:md:hover:text-blue-600 font-bold' %>
+    Sentence Tagger
+  </h1>
+
+  <p class="mb-10 italic" data-sentences-target="step">Select one starting word...</p>
+  <p class="mb-10 hidden italic" data-sentences-target="step">Now select an ending word...</p>
+  <p class="mb-10 hidden italic" data-sentences-target="step">Excelent! Now pick one of the existing variants or create one of your own.</p>
+
+  <%= render @sentence %>
+
+  <div data-sentences-target="entityFormWrap" class="hidden rounded shadow-lg p-10">
+    <%= render partial: 'entities/form', locals: { entity: @new_entity } %>
+  </div>
+</div>

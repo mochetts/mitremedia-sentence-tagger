@@ -1,0 +1,55 @@
+<%= form_with model: entity, class: 'mt-10 display-flex flex-col' do |form| %>
+
+  <%= form.hidden_field :word_start_index, value: "", 'data-sentences-target' => 'wordStartIndexInput' %>
+  <%= form.hidden_field :word_end_index, value: "", 'data-sentences-target' => 'wordEndIndexInput' %>
+  <%= form.hidden_field :sentence_id, value: entity.sentence_id %>
+
+  <div>
+  <%= form.select :entity_type_id, available_entity_types, {}, {
+      class: '
+        bg-gray-50
+        border
+        border-gray-300
+        text-gray-900
+        text-sm
+        rounded-lg
+        focus:ring-blue-500
+        focus:border-blue-500
+      ',
+      data: {
+        'sentences-target' => 'entityTypeSelect',
+        'action' => 'sentences#onEntityTypeSelect'
+      }
+  } %>
+
+  <%= form.fields_for :entity_type do |entity_type_form| %>
+    <%= entity_type_form.text_field :text, {
+        class: '
+          bg-gray-50
+          border
+          border-gray-300
+          text-gray-900
+          text-sm
+          rounded-lg
+          focus:ring-blue-500
+          focus:border-blue-500
+          w-1/4
+        ',
+        data: { 'sentences-target' => 'entityTypeTextInput' },
+        placeholder: 'Enter a text for the tag...'
+      }
+    %>
+    <div class="inline-flex" data-sentences-target="entityTypeColorInputWrap">
+      <%= entity_type_form.label :color, ', and select a color' %>
+      <%= entity_type_form.color_field :color, {
+          class: 'h-6 ml-2',
+          placeholder: 'And pick a color..',
+          data: { 'sentences-target' => 'entityTypeColorInput' },
+        }
+      %>
+    </div>
+  <% end %>
+  </div>
+
+  <%= form.button 'Add Tag', class: 'mt-10 btn btn-blue' %>
+<% end %>

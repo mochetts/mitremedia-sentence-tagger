@@ -1,0 +1,27 @@
+<div class="block mb-7 flex w-full">
+  <div class="flex-grow">
+      <span class="cursor-default">
+        >
+        <% sentence.text.strip.split(' ').each_with_index do |word, idx| %>
+        <% if sentence.entities_by_word_index[idx] %>
+            <% if sentence.entities_by_word_index[idx].word_start_index == idx %>
+              <%= render sentence.entities_by_word_index[idx] %>
+            <% end %>
+          <% else %>
+            <span
+              data-sentences-target="word"
+              class="<%= current_page?(sentence_path(sentence)) && 'hover:text-blue-600 hover:cursor-pointer' %>"
+              data-action="click->sentences#selectWord"
+              data-word-index="<%= idx %>"
+            >
+              <%= word %>
+            </span>
+          <% end %>
+        <% end %>
+      </span>
+
+      <% if current_page?(sentences_path) %>
+        <%= link_to 'Add Tags ->', sentence, class: 'dark:md:hover:text-blue-600 ml-2 font-bold' %>
+      <% end %>
+  </div>
+</div>
