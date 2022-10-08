@@ -45,6 +45,9 @@ gem "bootsnap", require: false
 # Avoids N+1s
 gem 'ar_lazy_preload'
 
+# Postgres
+gem 'pg'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
