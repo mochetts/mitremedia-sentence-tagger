@@ -1,5 +1,3 @@
-# Mitremedia Sentence Tagger
-
 <h1 align="center">
   <p align="center">
     <a href="https://travis-ci.org/mochetts/mitremedia-sentence-tagger">
@@ -8,6 +6,7 @@
   </p>
 </h1>
 
+# Mitremedia Sentence Tagger
 
 This is a proof of concept on how a simple sentence tagger could look like.
 
