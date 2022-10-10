@@ -1,7 +1,7 @@
 class Sentence < ApplicationRecord
-  has_many :entities
+  has_many :entities, dependent: :destroy
 
-  before_save -> { text = self.text.strip }
+  before_save -> { self.text = self.text.strip }
 
   validates :text, presence: true
 

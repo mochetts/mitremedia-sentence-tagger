@@ -1,6 +1,6 @@
 class Entity < ApplicationRecord
-  belongs_to :sentence
-  belongs_to :entity_type
+  belongs_to :sentence, dependent: :destroy
+  belongs_to :entity_type, dependent: :destroy
 
   accepts_nested_attributes_for :entity_type
 
@@ -14,7 +14,7 @@ class Entity < ApplicationRecord
 
   def not_overlapping
     overlapping_entity = sentence.entities.find { |e| overlaps_with?(e) }
-    errors.add(:tag, "overlaps with another tag") unless overlapping_entity.nil?
+    errors.add(:tag, 'overlaps with another tag') unless overlapping_entity.nil?
   end
 
   def overlaps_with?(other_entity)

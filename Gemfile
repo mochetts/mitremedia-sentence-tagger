@@ -67,6 +67,12 @@ group :development do
 
   gem "pry-byebug"
 
+  gem "rspec-rails"
+
+  gem "factory_bot_rails"
+
+  gem "shoulda-matchers", "5.0.0.rc1"
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -79,6 +85,11 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "shoulda-matchers", "5.0.0.rc1"
+  gem "pry-rails"
+  gem "pry-byebug"
 end
 
 gem "tailwindcss-rails", "~> 2.0"
