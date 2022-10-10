@@ -43,10 +43,12 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Avoids N+1s
-gem 'ar_lazy_preload'
+gem "ar_lazy_preload"
 
 # Postgres
-gem 'pg'
+gem "pg"
+
+gem "faker", "2.20.0"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
