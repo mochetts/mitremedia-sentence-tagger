@@ -1,7 +1,7 @@
 <h1 align="center">
   <p align="center">
-    <a href="https://travis-ci.org/mochetts/mitremedia-sentence-tagger">
-      <img alt="Build Status" src="https://travis-ci.org/mochetts/mitremedia-sentence-tagger.svg"/>
+    <a href="https://app.travis-ci.com/github/mochetts/mitremedia-sentence-tagger">
+      <img src="https://app.travis-ci.com/mochetts/mitremedia-sentence-tagger.svg?branch=main" alt="build:main">
     </a>
   </p>
 </h1>
