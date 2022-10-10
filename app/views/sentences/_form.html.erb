@@ -1,6 +1,6 @@
 <%= form_with(model: sentence, class: "mb-7") do |form| %>
   <div class="mb-5">
-    <%= form.text_field :text, placeholder: "Add a new sentence", class: "inline-block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-96" %>
-    <%= form.submit "Save 💾", class: "btn ml-2 btn-blue" %>
+    <%= form.text_field :text, placeholder: "Type to add a new sentence...", class: "inline-block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full sm:w-96" %>
+    <%= form.submit "+ Add Sentence", class: "btn mt-5 sm:mt-0 sm:ml-2 btn-blue" %>
   </div>
 <% end %>

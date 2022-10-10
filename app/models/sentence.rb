@@ -3,6 +3,8 @@ class Sentence < ApplicationRecord
 
   before_save -> { text = self.text.strip }
 
+  validates :text, presence: true
+
   def entities_by_word_index
     @entities_by_word_index ||= entities.inject({}) do |hash, entity|
       (entity.word_start_index..entity.word_end_index).each do |word_index|

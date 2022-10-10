@@ -4,7 +4,7 @@
   <%= form.hidden_field :word_end_index, value: "", 'data-sentences-target' => 'wordEndIndexInput' %>
   <%= form.hidden_field :sentence_id, value: entity.sentence_id %>
 
-  <div>
+  <div class="display-flex sm:flex-col">
   <%= form.select :entity_type_id, available_entity_types, {}, {
       class: '
         bg-gray-50
@@ -15,6 +15,10 @@
         rounded-lg
         focus:ring-blue-500
         focus:border-blue-500
+        w-full
+        mb-3
+        sm:w-2/12
+        sm:mb-0
       ',
       data: {
         'sentences-target' => 'entityTypeSelect',
@@ -33,14 +37,17 @@
           rounded-lg
           focus:ring-blue-500
           focus:border-blue-500
-          w-1/4
+          w-full
+          mb-3
+          sm:w-1/4
+          sm:mb-0
         ',
         data: { 'sentences-target' => 'entityTypeTextInput' },
         placeholder: 'Enter a text for the tag...'
       }
     %>
     <div class="inline-flex" data-sentences-target="entityTypeColorInputWrap">
-      <%= entity_type_form.label :color, ', and select a color' %>
+      <%= entity_type_form.label :color, ' and select a color' %>
       <%= entity_type_form.color_field :color, {
           class: 'h-6 ml-2',
           placeholder: 'And pick a color..',
@@ -51,5 +58,5 @@
   <% end %>
   </div>
 
-  <%= form.button 'Tag', class: 'mt-10 btn btn-blue' %>
+  <%= form.button 'Tag', class: 'mt-5 btn btn-blue' %>
 <% end %>

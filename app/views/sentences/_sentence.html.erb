@@ -1,26 +1,26 @@
-<div class="block mb-7 flex w-full">
-  <div class="flex-grow">
-      <span class="cursor-default">
-        <% sentence.text.strip.split(' ').each_with_index do |word, idx| %>
-        <% if sentence.entities_by_word_index[idx] %>
-            <% if sentence.entities_by_word_index[idx].word_start_index == idx %>
-              <%= render sentence.entities_by_word_index[idx] %>
-            <% end %>
-          <% else %>
-            <span
-              data-sentences-target="word"
-              class="<%= current_page?(sentence_path(sentence)) && 'hover:text-blue-600 hover:cursor-pointer' %>"
-              data-action="click->sentences#selectWord"
-              data-word-index="<%= idx %>"
-            >
-              <%= word %>
-            </span>
-          <% end %>
+<div class="w-full rounded overflow-hidden shadow-lg py-10 px-5 mb-10">
+  <p class="cursor-default">
+    <% sentence.text.strip.split(' ').each_with_index do |word, idx| %>
+      <% if sentence.entities_by_word_index[idx] %>
+        <% if sentence.entities_by_word_index[idx].word_start_index == idx %>
+          <%= render sentence.entities_by_word_index[idx] %>
         <% end %>
-      </span>
-
-      <% if current_page?(sentences_path) || current_page?(root_path) %>
-        / <%= link_to 'Add Tags ➕', sentence, class: 'btn btn-blue' %>
+      <% else %>
+        <span
+          data-sentences-target="word"
+          class="<%= current_page?(sentence_path(sentence)) && 'hover:text-blue-600 hover:cursor-pointer' %>"
+          data-action="click->sentences#selectWord"
+          data-word-index="<%= idx %>"
+        >
+          <%= word %>
+        </span>
       <% end %>
-  </div>
+    <% end %>
+  </p>
+
+  <% if current_page?(sentences_path) || current_page?(root_path) %>
+    <div class="mt-10">
+      <%= link_to '+ Add Tags', sentence, class: 'btn btn-blue' %>
+    </div>
+  <% end %>
 </div>

@@ -72,6 +72,7 @@ export default class extends Controller {
 
     renderSelectedWords() {
       this.wordTargets.forEach((word) => {
+        word.classList.remove('font-extrabold')
         word.classList.remove('text-blue-600')
         word.classList.remove('text-red-600')
         word.classList.remove('hover:text-red-600')
@@ -91,7 +92,10 @@ export default class extends Controller {
         }
 
         // After selecting both words (start and end), highlight the whole selected tag
-        if (this.step == 2 && wordIndex >= this.wordStartIndex() && wordIndex <= this.wordEndIndex()) word.classList.add('text-red-600')
+        if (this.step == 2 && wordIndex >= this.wordStartIndex() && wordIndex <= this.wordEndIndex()) {
+           word.classList.add('text-red-600')
+           word.classList.add('font-extrabold')
+        }
       })
     }
 
