@@ -1,5 +1,14 @@
 # Mitremedia Sentence Tagger
 
+<h1 align="center">
+  <p align="center">
+    <a href="https://travis-ci.org/mochetts/mitremedia-sentence-tagger">
+      <img alt="Build Status" src="https://travis-ci.org/mochetts/mitremedia-sentence-tagger.svg"/>
+    </a>
+  </p>
+</h1>
+
+
 This is a proof of concept on how a simple sentence tagger could look like.
 
 You can access the demo app on this link:
