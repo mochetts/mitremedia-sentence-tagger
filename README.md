@@ -22,7 +22,7 @@ https://user-images.githubusercontent.com/3678598/194963436-19ed35d0-8229-40d4-9
 
 - [Ruby On Rails](https://rubyonrails.org/)
 - [TurboLink](https://turbo.hotwired.dev/)
-- [TurboLink](https://stimulus.hotwired.dev/)
+- [StimulusJS](https://stimulus.hotwired.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
 ## Dev setup 💻 
