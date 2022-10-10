@@ -3,6 +3,7 @@
 This is a proof of concept on how a simple sentence tagger could look like.
 
 You can access the demo app on this link:
+
 http://mitremedia-sentence-tagger.herokuapp.com/
 
 ## Demo
