@@ -9,9 +9,9 @@ class SentencesController < ApplicationController
 
     respond_to do |format|
       if @sentence.save
-        format.html { redirect_to sentences_url, notice: "Sentence was successfully created" }
+        format.html { redirect_to sentences_url, notice: 'Sentence was successfully created.' }
       else
-        format.html { redirect_to sentences_url, flash: { error: "There was a problem creating your sentence: #{@sentence.errors.full_messages.join(', ')}" } }
+        format.html { redirect_to sentences_url, flash: { error: "There was a problem creating your sentence: #{@sentence.errors.full_messages.join(', ')}." } }
       end
     end
   end

@@ -72,7 +72,7 @@ group :development do
   gem "factory_bot_rails"
 
   gem "shoulda-matchers", "5.0.0.rc1"
-
+  gem 'rails-controller-testing' # If you are using Rails 5.x
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -88,6 +88,7 @@ group :test do
   gem "rspec-rails"
   gem "factory_bot_rails"
   gem "shoulda-matchers", "5.0.0.rc1"
+  gem 'rails-controller-testing' # If you are using Rails 5.x
   gem "pry-rails"
   gem "pry-byebug"
 end
