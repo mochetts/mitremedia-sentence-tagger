@@ -93,7 +93,6 @@ group :test do
   gem 'rails-controller-testing' # If you are using Rails 5.x
   gem "pry-rails"
   gem "pry-byebug"
-  gem "coveralls_reborn", "~> 0.18.0", require: false
 end
 
 gem "tailwindcss-rails", "~> 2.0"
