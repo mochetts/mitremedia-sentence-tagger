@@ -28,20 +28,25 @@ https://user-images.githubusercontent.com/3678598/194963436-19ed35d0-8229-40d4-9
 ## Dev setup 💻 
 
 1) Clone repo
+2) Install gems
 
-2) Run migrations: 
+```
+bundle install
+```
+
+3) Run migrations: 
 
 ```
 rails db:migrate
 ```
 
-3) Run seeds:
+4) Run seeds:
 
 ```
 rails db:seed
 ```
 
-4) Run dev environment:
+5) Run dev environment:
 
 ```
 bin/dev
