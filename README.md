@@ -62,3 +62,4 @@ These models relate to each other following this spec:
 - Add more robust integration tests such as cypress or capybara + selenium.
 - Add the rest of the CRUD operations for sentences and entities (tags).
 - Use vite ruby + vite rails for a slick dev experience.
+- Use something like [ActiveInteraction](https://github.com/AaronLasseigne/active_interaction) to avoid flooding controllers and/or models with business logic.
