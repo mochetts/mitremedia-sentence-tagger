@@ -1,5 +1,5 @@
 <div class="w-full rounded overflow-hidden shadow-lg py-10 px-5 mb-10">
-  <p class="cursor-default">
+  <p class="cursor-default leading-10">
     <% sentence.text.strip.split(' ').each_with_index do |word, idx| %>
       <% if sentence.entities_by_word_index[idx] %>
         <% if sentence.entities_by_word_index[idx].word_start_index == idx %>
