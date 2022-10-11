@@ -12,7 +12,7 @@ This is a proof of concept on how a simple sentence tagger could look like.
 
 I wanted to be as pure as possible by using RoR mostly as it comes out of the box. This is not how I would start an app that needs to be production ready. I would still need to dig a little bit more into StimulusJS best practices pros / cons. 
 
-I took this as a glimpse at how the rails community wants devs to code their apps thse days.
+I took this as a glimpse at how the rails community wants devs to code their apps these days.
 
 You can access the demo app on this link:
 
