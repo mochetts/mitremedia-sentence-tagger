@@ -90,9 +90,11 @@ group :test do
   gem "rspec-rails"
   gem "factory_bot_rails"
   gem "shoulda-matchers", "5.0.0.rc1"
-  gem 'rails-controller-testing' # If you are using Rails 5.x
+  gem "rails-controller-testing" # If you are using Rails 5.x
   gem "pry-rails"
   gem "pry-byebug"
+  gem "coveralls_reborn", require: false
+  gem "simplecov-lcov", require: false
 end
 
 gem "tailwindcss-rails", "~> 2.0"

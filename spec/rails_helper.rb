@@ -6,6 +6,23 @@ require_relative '../config/environment'
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 
+if ENV['CI']
+  require 'simplecov'
+  require 'coveralls'
+  require 'simplecov-lcov'
+
+  SimpleCov.formatter = SimpleCov::Formatter::LcovFormatter
+  SimpleCov::Formatter::LcovFormatter.config.report_with_single_file = true
+
+  begin
+    SimpleCov.start 'rails'
+    Coveralls.wear!
+  rescue
+    nil
+  end
+end
+
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
